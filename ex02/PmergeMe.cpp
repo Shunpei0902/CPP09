@@ -6,7 +6,7 @@
 /*   By: sasano <shunkotkg0141@gmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/05 09:52:45 by sasano            #+#    #+#             */
-/*   Updated: 2025/10/06 01:08:55 by sasano           ###   ########.fr       */
+/*   Updated: 2025/10/08 11:27:34 by sasano           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -101,9 +101,11 @@ void PmergeMe::makePairsVec(const std::vector<unsigned int> &input, std::vector<
         unsigned int first = input[2 * i];
         unsigned int second = input[2 * i + 1];
         if (first < second)
-            pairs.emplace_back(first, second); // (small, big)
+            // pairs.emplace_back(first, second); // (small, big)
+            pairs.push_back(PmergeMe::Pair(first, second));
         else
-            pairs.emplace_back(second, first);
+            // pairs.emplace_back(second, first);
+            pairs.push_back(PmergeMe::Pair(second, first));
     }
 
     if (hasStraggler)

@@ -6,7 +6,7 @@
 /*   By: sasano <shunkotkg0141@gmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/05 09:08:58 by sasano            #+#    #+#             */
-/*   Updated: 2025/10/06 01:05:00 by sasano           ###   ########.fr       */
+/*   Updated: 2025/10/08 11:29:24 by sasano           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -88,10 +88,17 @@ int main(int argc, char **argv)
     long deqTime = (end.tv_sec - start.tv_sec) * 1000000 + (end.tv_usec - start.tv_usec);
 
     // ソート後の表示
-    std::cout << "After:  ";
+    std::cout << "After Vector: ";
     for (size_t i = 0; i < sortedVec.size(); ++i)
     {
         std::cout << sortedVec[i] << (i + 1 == sortedVec.size() ? "" : " ");
+    }
+    std::cout << std::endl;
+
+    std::cout << "After Deque : ";
+    for (size_t i = 0; i < sortedDeq.size(); ++i)
+    {
+        std::cout << sortedDeq[i] << (i + 1 == sortedDeq.size() ? "" : " ");
     }
     std::cout << std::endl;
 
