@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Rpn.cpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sasano <shunkotkg0141@gmail.com>           +#+  +:+       +#+        */
+/*   By: sasano <sasano@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/05 08:13:42 by sasano            #+#    #+#             */
-/*   Updated: 2025/10/05 08:21:26 by sasano           ###   ########.fr       */
+/*   Updated: 2025/11/02 18:35:45 by sasano           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,11 +22,11 @@ static bool isOperatorToken(const std::string &token)
     return token.size() == 1 && std::strchr("+-*/", token[0]) != NULL;
 }
 
-bool Rpn::evaluate(const std::string &expression, long long &out)
+bool Rpn::evaluate(const std::string &expression, long &out)
 {
     std::istringstream iss(expression);
     std::string token;
-    std::stack<long long> stack;
+    std::stack<long> stack;
 
     while (iss >> token)
     {
@@ -39,11 +39,11 @@ bool Rpn::evaluate(const std::string &expression, long long &out)
             if (stack.size() < 2)
                 return false; // オペランドが足りない
 
-            long long b = stack.top();
+            long b = stack.top();
             stack.pop();
-            long long a = stack.top();
+            long a = stack.top();
             stack.pop();
-            long long result = 0;
+            long result = 0;
 
             switch (token[0])
             {

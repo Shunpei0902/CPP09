@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   BitcoinExchange.cpp                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sasano <shunkotkg0141@gmail.com>           +#+  +:+       +#+        */
+/*   By: sasano <sasano@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/04 20:10:54 by sasano            #+#    #+#             */
-/*   Updated: 2025/10/04 21:16:10 by sasano           ###   ########.fr       */
+/*   Updated: 2025/11/02 17:29:04 by sasano           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,9 +61,9 @@ bool BitcoinExchange::isValidDate(const std::string &input)
     int year, month, day;
     try
     {
-        year = std::stoi(input.substr(0, 4));
-        month = std::stoi(input.substr(5, 2));
-        day = std::stoi(input.substr(8, 2));
+        year = std::strtol(input.substr(0, 4).c_str(), NULL, 10);
+        month = std::strtol(input.substr(5, 2).c_str(), NULL, 10);
+        day = std::strtol(input.substr(8, 2).c_str(), NULL, 10);
     }
     catch (const std::exception &)
     {
@@ -97,7 +97,7 @@ bool BitcoinExchange::parseValue(const std::string &input, float &value)
 // CSV ファイルを読み込んで _rates を初期化
 void BitcoinExchange::loadDatabase(const std::string &csvPath)
 {
-    std::ifstream file(csvPath);
+    std::ifstream file(csvPath.c_str());
     if (!file || !file.is_open())
     {
         throw std::runtime_error("Could not open file: " + csvPath);

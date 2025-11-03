@@ -1,6 +1,6 @@
 SRC = BitcoinExchange.cpp main.cpp
 HEADERS = BitcoinExchange.hpp
-NAME = bitcoin
+NAME = btc
 CXX = c++
 CXXFLAGS = -Wall -Wextra -Werror -std=c++98
 RM = rm -f

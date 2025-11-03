@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sasano <shunkotkg0141@gmail.com>           +#+  +:+       +#+        */
+/*   By: sasano <sasano@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/05 08:22:37 by sasano            #+#    #+#             */
-/*   Updated: 2025/10/05 08:38:26 by sasano           ###   ########.fr       */
+/*   Updated: 2025/11/02 18:35:44 by sasano           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ int main(int argc, char **argv)
         return 1;
     }
 
-    long long result;
+    long result;
     if (Rpn::evaluate(argv[1], result))
     {
         std::cout << result << std::endl;

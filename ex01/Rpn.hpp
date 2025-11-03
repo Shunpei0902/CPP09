@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Rpn.hpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sasano <shunkotkg0141@gmail.com>           +#+  +:+       +#+        */
+/*   By: sasano <sasano@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/05 08:12:06 by sasano            #+#    #+#             */
-/*   Updated: 2025/10/05 08:24:29 by sasano           ###   ########.fr       */
+/*   Updated: 2025/11/02 20:41:54 by sasano           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,11 +17,12 @@
 #include <stack>
 #include <sstream>
 #include <cctype> // std::isdigit
+#include <cstring>
 
 class Rpn
 {
-public:
-    static bool evaluate(const std::string &expression, long long &out);
+    public:
+        static bool evaluate(const std::string &expression, long &out);
 };
 
 #endif

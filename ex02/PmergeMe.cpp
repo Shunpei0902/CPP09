@@ -3,14 +3,15 @@
 /*                                                        :::      ::::::::   */
 /*   PmergeMe.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sasano <shunkotkg0141@gmail.com>           +#+  +:+       +#+        */
+/*   By: sasano <sasano@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/05 09:52:45 by sasano            #+#    #+#             */
-/*   Updated: 2025/10/08 11:27:34 by sasano           ###   ########.fr       */
+/*   Updated: 2025/11/03 13:00:40 by sasano           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "PmergeMe.hpp"
+#include <iostream>
 
 PmergeMe::PmergeMe() {}
 
@@ -152,7 +153,7 @@ void PmergeMe::mergeInsertVec(const std::vector<Pair> &pairs, std::vector<unsign
 
     // 残りのペアの small を Jacobsthal 順に挿入
     std::vector<size_t> jacobOrder = buildJacobOrder(pairs.size());
-    for (size_t idx = 1; idx < jacobOrder.size(); ++idx)
+    for (size_t idx = 0; idx < jacobOrder.size(); idx++)
     {
         size_t i = jacobOrder[idx];        // 1..m-1
         unsigned int si = pairs[i].first;  // small
@@ -261,7 +262,7 @@ void PmergeMe::mergeInsertDeq(const std::deque<Pair> &pairs, std::deque<unsigned
 
     // 残りのペアの small を Jacobsthal 順に挿入
     std::vector<size_t> jacobOrder = buildJacobOrder(pairs.size());
-    for (size_t idx = 1; idx < jacobOrder.size(); ++idx)
+    for (size_t idx = 0; idx < jacobOrder.size(); idx++)
     {
         size_t i = jacobOrder[idx];        // 1..m-1
         unsigned int si = pairs[i].first;  // small

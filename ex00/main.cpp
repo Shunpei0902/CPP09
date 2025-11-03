@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sasano <shunkotkg0141@gmail.com>           +#+  +:+       +#+        */
+/*   By: sasano <sasano@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/04 20:16:07 by sasano            #+#    #+#             */
-/*   Updated: 2025/10/04 21:20:32 by sasano           ###   ########.fr       */
+/*   Updated: 2025/11/02 17:29:38 by sasano           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 
 static void processInput(const BitcoinExchange &btcEx, const std::string &inputPath)
 {
-    std::ifstream inputFile(inputPath);
+    std::ifstream inputFile(inputPath.c_str());
     if (!inputFile || !inputFile.is_open())
     {
         std::cerr << "Error: Could not open input file " << inputPath << std::endl;
