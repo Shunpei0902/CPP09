@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   PmergeMe.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sasano <shunkotkg0141@gmail.com>           +#+  +:+       +#+        */
+/*   By: sasano <sasano@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/05 08:56:07 by sasano            #+#    #+#             */
-/*   Updated: 2025/10/06 01:04:22 by sasano           ###   ########.fr       */
+/*   Updated: 2025/11/02 17:42:35 by sasano           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@
 #include <deque>
 #include <string>
 #include <utility> // std::pair
+#include <algorithm>
 
 class PmergeMe
 {
